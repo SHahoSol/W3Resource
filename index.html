@@ -1,19 +1,18 @@
+<html>
 <body>
-     <form>
-         <label>First number:</label> <input type="text" name="num1"/><br/>
-         <label>Second number:</label> <input type="text" name="num2"/><br/>
-         <input type="button" value="Compute" onclick="myResult.value=larger()"/>
-         <input type="text" name="result" id="myResult"/>
-     </form>
-</body>
+
+<p>Compare the numbers</p>
+
+<button onclick="myFunction()">Compare</button>
+
+<p id="demo"></p>
+
+
 <script>
-     function larger() {
-         var1 = parseInt(document.getElementsByName("num1")[0].value);
-         var2 = parseInt(document.getElementsByName("num2")[0].value);
-         var max = var1>var2 ? var1 : var2;
-         if(var1 === var2) {
-           document.write('same values not allowed'.toUpperCase());
-         }
-         return max;
-     }
+function myFunction() {
+    var a = Math.min(5, 10, 30);
+
+    var x = a;
+    document.getElementById("demo").innerHTML = x;
+}
 </script>
