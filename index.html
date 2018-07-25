@@ -1,11 +1,24 @@
 <script>
-//I think this counts being filter is a loop
-function signOfProduct(...nums) {
-  const negNums = nums.filter(num => num < 0 )
-  if (negNums.length%2 == 0 ) alert('The sign is +');
-  if (negNums.length%2 != 0 ) alert('The sign is -');
+
+checksProductSign(-3, -5, 7);
+
+
+function checksProductSign(a, b, c) {
+  let sign = '';
+
+  let product = a * b * c;
+
+  if(product > 0 ){
+    sign = '+'
+  } else if(product < 0){
+    sign = '-'
+  } else {
+    sign = '0'
+  }
+
+
+  return sign;
 }
 
-signOfProduct(2, 3, -6);
 
 </script>
