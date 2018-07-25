@@ -1,19 +1,11 @@
-<body>
-     <form>
-         <label>First number:</label> <input type="text" name="num1"/><br/>
-         <label>Second number:</label> <input type="text" name="num2"/><br/>
-         <input type="button" value="Compute" onclick="myResult.value=larger()"/>
-         <input type="text" name="result" id="myResult"/>
-     </form>
-</body>
 <script>
-     function larger() {
-         var1 = parseInt(document.getElementsByName("num1")[0].value);
-         var2 = parseInt(document.getElementsByName("num2")[0].value);
-         var max = var1>var2 ? var1 : var2;
-         if(var1 === var2) {
-           document.write('same values not allowed'.toUpperCase());
-         }
-         return max;
-     }
+//I think this counts being filter is a loop
+function signOfProduct(...nums) {
+  const negNums = nums.filter(num => num < 0 )
+  if (negNums.length%2 == 0 ) alert('The sign is +');
+  if (negNums.length%2 != 0 ) alert('The sign is -');
+}
+
+signOfProduct(2, 3, -6);
+
 </script>
